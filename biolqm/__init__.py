@@ -175,7 +175,7 @@ def to_ginsim(model):
     return ginsim.load(ginml_file)
 
 def to_maboss(model):
-    import_colomoto_tool("maboss")
+    maboss = import_colomoto_tool("maboss")
     maboss_file = new_output_file("bnd")
     assert save(model, maboss_file, "bnd")
     return maboss.load(maboss_file, "%s.cfg" % maboss_file)
